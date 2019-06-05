@@ -10186,7 +10186,17 @@ Pointer.prototype.resolve = function (obj, options) {
 
     var token = tokens[i];
     if (this.value[token] === undefined) {
-      throw ono.syntax('Error resolving $ref pointer "%s". \nToken "%s" does not exist.', this.originalPath, token);
+      // throw ono.syntax('Error resolving $ref pointer "%s". \nToken "%s" does not exist.', this.originalPath, token);
+      const properties = {
+        title: token,
+        properties: {
+          error: '不存在的Schema',
+          type: 'string'
+        },
+        type: 'object'
+      }
+      this.value = this.value[token] = properties;
+      this.$ref.set(`/schema/${token}`, obj)
     }
     else {
       this.value = this.value[token];

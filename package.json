@@ -9,7 +9,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "call-me-maybe": "^1.0.1",
-    "json-schema-ref-parser-kill-not-schema": "^6.1.0.tychen.1",
+    "json-schema-ref-parser": "^6.0.3",
     "ono": "^4.0.11",
     "openapi-schema-validation": "^0.4.2",
     "swagger-methods": "^1.0.8",
@@ -94,5 +94,5 @@
     "test:node": "mocha",
     "upgrade": "npm-check -u"
   },
-  "version": "0.0.1"
+  "version": "0.0.4"
 }

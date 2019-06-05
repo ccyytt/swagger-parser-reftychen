@@ -1,6 +1,11 @@
-基于原swagger-parser解析修改了下package.json里面的json-schema-ref-parser指向.  
-原因: 官方解析时如果存在不存在的schema的话会报错,避免这条不存的报错
-
+基于原swagger-parser
+原因: 官方解析时如果存在不存在的schema的话会报错,避免这条不存的报错  
+修改文件 dist/swagger-parser.js  10188行
+已上传npm
+```shell
+yarn || npm 
+npm i swagger-parser-reftychen
+```
 
 
 以下是官方原文 2019-06-05及以前的
