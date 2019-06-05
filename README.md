@@ -6,7 +6,10 @@
 yarn || npm 
 npm i swagger-parser-reftychen
 ```
-
+**引入注意,因未知原因在直接引入的时候开发环境没有问题但应用到生产环境build打包后可能会存在打入的是node环境的执行代码导致bug请自行调试,当前版本只修改了dist浏览器端的代码 lib文件内的并未修改
+```js
+import * as Swagger from 'swagger-parser-reftychen/dist/swagger-parser'
+```
 
 以下是官方原文 2019-06-05及以前的
 Swagger 2.0 and OpenAPI 3.0 parser/validator
