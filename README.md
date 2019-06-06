@@ -6,10 +6,14 @@
 yarn || npm 
 npm i swagger-parser-reftychen
 ```
-**引入注意,因未知原因在直接引入的时候开发环境没有问题但应用到生产环境build打包后可能会存在打入的是node环境的执行代码导致bug请自行调试,当前版本只修改了dist浏览器端的代码 lib文件内的并未修改
+**引入注意,在直接引入的时候开发环境没有问题但应用到生产环境build打包后可能会存在打入的是node环境的执行代码导致bug请自行调试,当前版本只修改了dist浏览器端的代码 lib文件内的并未修改
 ```js
 import * as Swagger from 'swagger-parser-reftychen/dist/swagger-parser'
 ```
+原则上应该下载官方架子修改里面所以来的 [json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)
+的 dereference 方法 （pointer.js 86行的代码）然后通过官方的build:browser 方法构建出 dist 的内容,同时也可以修改[json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)等方法，但是本人比较懒就直接修改了 swagger-parser的dist文件。
+
+
 
 以下是官方原文 2019-06-05及以前的
 Swagger 2.0 and OpenAPI 3.0 parser/validator
