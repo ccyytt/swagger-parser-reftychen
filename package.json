@@ -75,7 +75,7 @@
   "name": "swagger-parser-reftychen",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/APIDevTools/swagger-parser.git"
+    "url": "git+https://github.com/ccyytt/swagger-parser-reftychen.git"
   },
   "scripts": {
     "build": "npm run build:browser && npm run build:website && npm run build:sass",
@@ -94,5 +94,5 @@
     "test:node": "mocha",
     "upgrade": "npm-check -u"
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
