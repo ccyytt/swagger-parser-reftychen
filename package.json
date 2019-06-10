@@ -94,5 +94,5 @@
     "test:node": "mocha",
     "upgrade": "npm-check -u"
   },
-  "version": "0.0.8"
+  "version": "0.0.9"
 }

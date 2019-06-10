@@ -1,5 +1,5 @@
 基于原swagger-parser
-原因: 官方解析时如果存在不存在的schema的话会报错,避免这条不存的报错  
+原因: 官方解析时如果存在不存在的schema的话会报错,避免这条不存在的报错  
 修改文件 dist/swagger-parser.js  10188行
 已上传npm
 ```shell
@@ -10,7 +10,7 @@ npm i swagger-parser-reftychen
 ```js
 import * as Swagger from 'swagger-parser-reftychen/dist/swagger-parser'
 ```
-原则上应该下载官方架子修改里面所以来的 [json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)
+原则上应该下载官方架子修改里面依赖的 [json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)
 的 dereference 方法 （pointer.js 86行的代码）然后通过官方的build:browser 方法构建出 dist 的内容,同时也可以修改[json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)等方法，但是本人比较懒就直接修改了 swagger-parser的dist文件。
 
 
